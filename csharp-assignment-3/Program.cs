@@ -110,10 +110,13 @@ public class Program
         for (int i = 0; i < throwBallCount; ++i)
         {
             ball.Throw();
+            Console.WriteLine($"Ball ThrownCount: {ball.ThrownCount}");
         }
         Debug.Assert(ball.ThrownCount == (nuint)throwBallCount);
 
+        Console.WriteLine($"Ball size before pop: {ball.Size}");
         ball.Pop();
+        Console.WriteLine($"Ball size after pop: {ball.Size}");
         Debug.Assert(ball.Size == 0);
     }
 
